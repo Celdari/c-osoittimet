@@ -12,7 +12,7 @@
  * 
  */
 
-double alv(double hinta);
+void alv(double *hinta);
 void kysy(double *hinta);
 
 int main(int argc, char** argv) {
@@ -21,13 +21,14 @@ int main(int argc, char** argv) {
     kysy(&hinta);
     
     printf("Hinta ilman alvia: %.2f\n", hinta);
-    printf("Hinta alvin kanssa: %.2f\n", alv(hinta));
+    alv(&hinta);
+    printf("Hinta alvin kanssa: %.2f\n", hinta);
     
     return (EXIT_SUCCESS);
 }
 
-double alv(double hinta) {
-    return hinta * 1.22;
+void alv(double *hinta) {
+    *hinta *= 1.22;
 }
 
 void kysy(double *hinta) {

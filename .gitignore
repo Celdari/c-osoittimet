@@ -29,3 +29,5 @@
 *.hex
 /t1/build/
 /t1/dist/
+/t2/dist/
+/t2/build/
